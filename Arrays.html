@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var num1=[12,34,56,78,90];
+        var s1= ["shakul", "srinivas", "karnika", "rahul"];
+        var s2=["aaa", "ddd", 45];
+        var num2= new Array(12,34,56,11,22)
+        console.log(num2[4])
+        console.log(s1.length)
+        for(var i=0;i<s1.length;i++){
+        console.log(s1[i])
+        }
+        for(var i of num2){
+            console.log(i)
+        }
+        for(var i in num1){
+            console.log(num1[i])
+        }
+        document.write(s1);
+        var len=s1.length;
+        //add element at the end of the array
+        s1.push("Arrays tutorial")
+        //add element at the starting of the array
+        s1.unshift("Hro vired")
+        console.log(s1)
+        //dlete element from the end of the array
+        s1.pop();
+        //delete element from the starting of the array
+        s1.shift();
+        console.log(s1);
+        //adding elements after position 2
+        s1.splice(2,0,"aa","bb");
+        //adding elements after 2 and deleting 3
+        s1.splice(2,3, "cc","dd");
+        //
+        s1.splice(2,3);
+
+        var z=s1.splice(1,1);
+        console.log(z);
+       
+        
+
+    </script>
+</body>
+</html>

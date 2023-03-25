@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function car(company,model,seating){
+            this.company = company;
+            this.model=model;
+            this.seating=seating;
+        }
+        var c1= new car("hyundai", "verna", "5")
+        console.log(c1)
+        console.log(c1.company)
+
+        var c2={
+            "name of the company": "toyota",
+            model: "fortuner",
+            seating: "7",
+            show: function (){
+                console.log("this is my new car"+this.model+"from the company"+this.seating)
+            }
+
+        }
+        console.log(c2)
+        console.log(c2["name of the company"])
+
+        // for(var i in c2){
+        //     console.log(c2[i])
+        // }
+        c2.model="bmw"
+        console.log(c2.model)
+        delete c2.seating
+        console.log(c2)
+        c2.show()
+    </script>
+</body>
+</html>

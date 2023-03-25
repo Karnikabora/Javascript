@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var n1=[1,2,3,4,5,2,3,8,9,11,20];
+        console.log(n1.indexOf(20));
+        console.log(n1.lastIndexOf(2));
+        console.log(n1.includes(50))
+
+        //show the first number in the array which is greater than 5
+        var s=n1.find(function(i){
+            return i>5;
+        })
+        console.log(s)
+
+        //will show the index number
+        var s=n1.findIndex(function(i){
+            return i>5;
+        })
+        console.log(s)
+
+        //will right down all the number greater than 5
+        var s=n1.filter(function(i){
+            return i>5;
+        })
+        console.log(s)
+
+        //sorting
+        console.log(n1.sort())
+        console.log(n1.sort(function(x,y){
+            return x-y;
+        }))
+
+        // Find the maximum no
+        function max(arr){
+            return Math.max.apply(null, arr)
+        }
+        console.log(max(n1))
+
+        //find the minimum number
+        function min(arr){
+            return Math.min.apply(null, arr)
+        }
+        console.log(min(n1))
+    </script>
+</body>
+</html>

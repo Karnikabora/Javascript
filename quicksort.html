@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function quickshort(arr) {
+  const left = [];
+  const right = [];
+  var pav = arr[arr.length - 1];
+  for (var i = 0; i < arr.length - 1; i++) {
+    arr[i] < pav ? left.push(arr[i]) : right.push(arr[i]);
+  }
+  return [...quickshort(left), pav, ...quickshort(right)];
+}
+var arr = [52, 68, 45, 8, 2, 5, 75, 10];
+console.log(quickshort(arr));
+
+    </script>
+</body>
+</html>
